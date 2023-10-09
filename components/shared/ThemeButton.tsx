@@ -46,12 +46,12 @@ export default function ThemeButton() {
 
   return (
     <details className={`dropdown mb-32 ${!isLoaded && 'invisible'}`}>
-      <summary className="m-1 btn"><activeTheme.icon /></summary>
+      <summary className="m-1 btn"><activeTheme.icon className="text-xl" /></summary>
       <ul className="p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-52">
         {availableThemes.map((theme) => (
           <li key={theme.type} onClick={() => onSetTheme(theme)}>
             <a>
-              <span className="mr-4"><theme.icon /></span>
+              <span className="mr-4"><theme.icon className="text-xl" /></span>
               <span>{theme.name}</span>
             </a>
           </li>
