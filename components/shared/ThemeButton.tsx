@@ -20,9 +20,18 @@ export default function ThemeButton() {
       { type: ThemesTypes.DARK, icon: BsMoonStars, name: 'Dark' }
     ],
     [activeTheme, setActiveTheme] = useState(availableThemes[0]),
-    [isLoaded, setIsLoaded] = useState(false);
+    [isLoaded, setIsLoaded] = useState(false),
+    [isOpen, setIsOpen] = useState(false);
 
   const getIsTheSame = (theme: ITheme) => theme.type === String(theme) && activeTheme.type === String(theme);
+
+  const blurElement = () => {
+    const activeElement = document.activeElement;
+
+    if (activeElement instanceof HTMLElement) {
+      activeElement.blur();
+    }
+  }
 
   const onSetTheme = (theme: ITheme) => {
     if (getIsTheSame(theme)) {
@@ -31,6 +40,7 @@ export default function ThemeButton() {
    
     setTheme(theme.type);
     setActiveTheme(theme);
+    blurElement();
   };
 
   const getCurrentTheme = () => {
@@ -45,9 +55,9 @@ export default function ThemeButton() {
   }, []);
 
   return (
-    <details className={`dropdown mb-32 ${!isLoaded && 'invisible'}`}>
-      <summary className="m-1 btn"><activeTheme.icon className="text-xl" /></summary>
-      <ul className="p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-52">
+    <div className={`dropdown mb-32 ${!isLoaded && 'invisible'}`}>
+      <label tabIndex={0} className="m-1 btn"><activeTheme.icon className="text-xl" /></label>
+      <ul tabIndex={0} className="p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-52">
         {availableThemes.map((theme) => (
           <li key={theme.type} onClick={() => onSetTheme(theme)}>
             <a>
@@ -57,6 +67,6 @@ export default function ThemeButton() {
           </li>
         ))}
       </ul>
-    </details>
+    </div>
   );
 }
