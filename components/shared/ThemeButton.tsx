@@ -20,8 +20,7 @@ export default function ThemeButton() {
       { type: ThemesTypes.DARK, icon: BsMoonStars, name: 'Dark' }
     ],
     [activeTheme, setActiveTheme] = useState(availableThemes[0]),
-    [isLoaded, setIsLoaded] = useState(false),
-    [isOpen, setIsOpen] = useState(false);
+    [isLoaded, setIsLoaded] = useState(false)
 
   const getIsTheSame = (theme: ITheme) => theme.type === String(theme) && activeTheme.type === String(theme);
 
@@ -55,7 +54,7 @@ export default function ThemeButton() {
   }, []);
 
   return (
-    <div className={`dropdown mb-32 ${!isLoaded && 'invisible'}`}>
+    <div className={`dropdown dropdown-end ${!isLoaded && 'invisible'}`}>
       <label tabIndex={0} className="m-1 btn"><activeTheme.icon className="text-xl" /></label>
       <ul tabIndex={0} className="p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-52">
         {availableThemes.map((theme) => (
