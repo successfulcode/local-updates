@@ -21,7 +21,12 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${inter.className} flex flex-col min-h-screen`}>
         <Providers>
-          <header className="fixed w-full">
+          <div>Lorem ipsum dolor sit amet.</div>
+          <div>Lorem ipsum dolor sit amet.</div>
+          <div>Lorem ipsum dolor sit amet.</div>
+          <div>Lorem ipsum dolor sit amet.</div>
+
+          <header className="sticky top-0">
             <Navbar />
           </header>
           <main className="container mx-auto px-4 grow">
