@@ -2,7 +2,6 @@ import Link from 'next/link';
 import ThemeButton from '@/components/shared/ThemeButton';
 import Drawer from './Drawer';
 import DrawerButton from './DrawerButton';
-import { FiMenu } from 'react-icons/fi';
 
 export default function Navbar() {
 
@@ -58,7 +57,7 @@ export default function Navbar() {
         </div>
         <div className="h-3 primary-background"></div>
       </nav>
-    
+
       <Drawer />
     </>
   )
