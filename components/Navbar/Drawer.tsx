@@ -10,7 +10,7 @@ export default function Drawer() {
   return (
     <div className={`drawer ${isOpen ? 'drawer-open lg:hidden' : ''}`}>
       <input id="my-drawer" type="checkbox" className="drawer-toggle"/>
-      <div className="drawer-side">
+      <div className="drawer-side" style={{ width: '100%' }}>
         <label htmlFor="my-drawer" aria-label="close sidebar" className="drawer-overlay"></label>
 
         <div className="menu p-4 w-80 min-h-full bg-base-200 text-base-content">

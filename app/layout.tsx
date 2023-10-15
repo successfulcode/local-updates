@@ -22,8 +22,10 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${inter.className} flex flex-col min-h-screen`}>
         <ThemeProvider>
-          <div>Lorem ipsum dolor sit amet.</div>
-          <div>Lorem ipsum dolor sit amet.</div>
+          <section className="hidden lg:block">
+            <div>Lorem ipsum dolor sit amet.</div>
+            <div>Lorem ipsum dolor sit amet.</div>
+          </section>
 
           <header className="sticky top-0">
             <DrawerProvider>
