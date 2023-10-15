@@ -4,7 +4,7 @@ import { useContext } from 'react';
 
 export default function Drawer() {
 
-  const { isOpen, toggleMenu } = useContext(DrawerContext)!;
+  const { isOpen } = useContext(DrawerContext)!;
 
   return (
     <div className={`drawer ${isOpen ? 'drawer-open lg:hidden' : ''}`}>
