@@ -1,12 +1,10 @@
-import Providers from '@/providers/ThemeProvider';
 import './globals.css';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
-import Navbar from '@/components/Navbar/Navbar';
+import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import ThemeProvider from '@/providers/ThemeProvider';
 import { DrawerProvider } from '@/providers/DrawerProvider';
-import Drawer from '@/components/Navbar/Drawer';
 
 const inter = Inter({ subsets: ['latin'] });
 
