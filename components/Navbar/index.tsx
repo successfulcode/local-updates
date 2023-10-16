@@ -26,22 +26,22 @@ export default function Navbar() {
                   <summary>News</summary>
                   <ul className="p-2">
                     <li>
-                      <Link href="/about">News1</Link>
+                      <Link href="en/about">News1</Link>
                     </li>
                     <li>
-                      <Link href="/about">News2</Link>
+                      <Link href="en/about">News2</Link>
                     </li>
                     <li>
-                      <Link href="/about">News3</Link>
+                      <Link href="en/about">News3</Link>
                     </li>
                   </ul>
                 </details>
               </li>
               <li>
-                <Link href="/about">Ads</Link>
+                <Link href="en/about">Ads</Link>
               </li>
               <li>
-                <Link href="/about">About</Link>
+                <Link href="en/about">About</Link>
               </li>
             </ul>
           </div>

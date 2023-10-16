@@ -22,7 +22,13 @@ export default function ThemeButton() {
     [activeTheme, setActiveTheme] = useState(availableThemes[0]),
     [isLoaded, setIsLoaded] = useState(false)
 
-  const getIsTheSame = (theme: ITheme) => theme.type === String(theme) && activeTheme.type === String(theme);
+  const getIsTheSame = (theme: ITheme) => {
+    if (!theme?.type) {
+      return false;
+    }
+
+    return theme?.type === String(theme) && activeTheme?.type === String(theme);
+  }
 
   const blurElement = () => {
     const activeElement = document.activeElement;
@@ -33,6 +39,10 @@ export default function ThemeButton() {
   }
 
   const onSetTheme = (theme: ITheme) => {
+    if (!theme?.type) {
+      return;
+    }
+
     if (getIsTheSame(theme)) {
       return;
     }
