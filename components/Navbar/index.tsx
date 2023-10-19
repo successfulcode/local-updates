@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import Link from 'next-intl/link';
 import ThemeButton from '@/components/shared/ThemeButton';
 import Drawer from './Drawer';
 import DrawerButton from './DrawerButton';
@@ -26,22 +26,22 @@ export default function Navbar() {
                   <summary>News</summary>
                   <ul className="p-2">
                     <li>
-                      <Link href="en/about">News1</Link>
+                      <Link href="about">News1</Link>
                     </li>
                     <li>
-                      <Link href="en/about">News2</Link>
+                      <Link href="about">News2</Link>
                     </li>
                     <li>
-                      <Link href="en/about">News3</Link>
+                      <Link href="about">News3</Link>
                     </li>
                   </ul>
                 </details>
               </li>
               <li>
-                <Link href="en/about">Ads</Link>
+                <Link href="/">Ads</Link>
               </li>
               <li>
-                <Link href="en/about">About</Link>
+                <Link href="/about">About</Link>
               </li>
             </ul>
           </div>
