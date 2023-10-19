@@ -1,5 +1,6 @@
 'use client'
 import { DrawerContext } from '@/providers/DrawerProvider';
+import Link from 'next/link';
 import { useContext } from 'react';
 import { AiOutlineClose } from 'react-icons/ai';
 
@@ -13,7 +14,7 @@ export default function Drawer() {
       <div className="drawer-side" style={{ width: '100%' }}>
         <label htmlFor="my-drawer" aria-label="close sidebar" className="drawer-overlay"></label>
 
-        <div className="menu p-4 w-80 min-h-full bg-base-200 text-base-content">
+        <div className="menu p-4 min-h-full bg-base-200 text-base-content w-full">
           <div className="flex justify-end cursor-pointer">
             <div onClick={closeMenu}>
               <AiOutlineClose className="text-2xl" />
@@ -25,6 +26,8 @@ export default function Drawer() {
               {/* Sidebar content here */}
               <li><a>Sidebar Item 1</a></li>
               <li><a>Sidebar Item 2</a></li>
+
+              <Link href='/about'>About</Link>
             </ul>
           </div>
         </div>

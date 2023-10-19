@@ -20,7 +20,7 @@ export default function Navbar() {
             </Link>
           </div>
           <div className="navbar-center hidden lg:flex">
-            <ul className="menu menu-horizontal px-1">
+            <ul className="menu menu-horizontal px-1 w-100">
               <li tabIndex={0}>
                 <details>
                   <summary>News</summary>
@@ -55,7 +55,7 @@ export default function Navbar() {
             <ThemeButton />
           </div>
         </div>
-        <div className="h-3 primary-background"></div>
+        <div className="h-1 primary-background"></div>
       </nav>
 
       <Drawer />
