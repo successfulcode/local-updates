@@ -1,9 +1,9 @@
+import {notFound} from 'next/navigation';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 
 import ThemeProvider from '@/providers/ThemeProvider';
 import { DrawerProvider } from '@/providers/DrawerProvider';
-import {notFound} from 'next/navigation';
 import { NextIntlClientProvider } from 'next-intl';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
@@ -56,7 +56,7 @@ export default async function RootLayout({
               <main className="container mx-auto px-4 grow">
                 {children}
               </main>
-              
+
               <footer>
                 <Footer />
               </footer>
