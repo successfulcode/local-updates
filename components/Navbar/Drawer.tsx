@@ -3,6 +3,7 @@ import { DrawerContext } from '@/providers/DrawerProvider';
 import Link from 'next-intl/link';
 import { useContext } from 'react';
 import { AiOutlineClose } from 'react-icons/ai';
+import DrawerLink from './DrawerLink';
 
 export default function Drawer() {
 
@@ -27,7 +28,7 @@ export default function Drawer() {
               <li><a>Sidebar Item 1</a></li>
               <li><a>Sidebar Item 2</a></li>
 
-              <Link href='/about'>About</Link>
+              <DrawerLink href='/about'>About</DrawerLink>
             </ul>
           </div>
         </div>
