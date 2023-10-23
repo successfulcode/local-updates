@@ -2,6 +2,8 @@ import Link from 'next-intl/link';
 import ThemeButton from '@/components/shared/ThemeButton';
 import Drawer from './Drawer';
 import DrawerButton from './DrawerButton';
+import ConnectButtons from '../shared/ConnectButtons';
+import Logo from '../shared/Logo';
 
 export default function Navbar() {
 
@@ -10,14 +12,12 @@ export default function Navbar() {
       <nav>
         <div className="navbar bg-base-100">
           <div className="navbar-start">
-            <div className="lg:hidden">
+            <div className="lg:hidden ml-3">
               <DrawerButton />
             </div>
-            <Link href="/" className="normal-case text-xl">
-              <span className='primary-background bg-clip-text text-transparent'>
-                Locales Updates
-              </span>
-            </Link>
+            <div className="ml-4">
+              <Logo />
+            </div>
           </div>
           <div className="navbar-center hidden lg:flex">
             <ul className="menu menu-horizontal px-1 w-100">
@@ -46,11 +46,8 @@ export default function Navbar() {
             </ul>
           </div>
           <div className="navbar-end mr-5 flex">
-            <div>
-              <a className="btn mr-2">Sign Up</a>
-            </div>
-            <div>
-              <a className="btn mr-2">Login</a>
+            <div className="hidden lg:block">
+              <ConnectButtons />
             </div>
             <ThemeButton />
           </div>

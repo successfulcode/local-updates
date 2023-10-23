@@ -4,6 +4,8 @@ import Link from 'next-intl/link';
 import { useContext } from 'react';
 import { AiOutlineClose } from 'react-icons/ai';
 import DrawerLink from './DrawerLink';
+import ConnectButtons from '../shared/ConnectButtons';
+import Logo from '../shared/Logo';
 
 export default function Drawer() {
 
@@ -22,13 +24,21 @@ export default function Drawer() {
             </div>
           </div>
           <div>
-            <ul>
-              {/* <button onClick={getIsDrawerOpened}>test</button> */}
-              {/* Sidebar content here */}
-              <li><a>Sidebar Item 1</a></li>
-              <li><a>Sidebar Item 2</a></li>
+            <div className="flex justify-center">
+              <Logo />
+            </div>
+            <ConnectButtons />
 
-              <DrawerLink href='/about'>About</DrawerLink>
+            <ul>
+              <li>
+                <DrawerLink href='/'>News</DrawerLink>
+              </li>
+              <li>
+                <DrawerLink href='/'>Ads</DrawerLink>
+              </li>
+              <li>
+                <DrawerLink href='/about'>About</DrawerLink>
+              </li>
             </ul>
           </div>
         </div>
