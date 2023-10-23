@@ -1,6 +1,5 @@
 'use client'
 import { DrawerContext } from '@/providers/DrawerProvider';
-import Link from 'next-intl/link';
 import { useContext } from 'react';
 import { AiOutlineClose } from 'react-icons/ai';
 import DrawerLink from './DrawerLink';

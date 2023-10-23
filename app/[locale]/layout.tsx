@@ -9,7 +9,7 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
  
 export function generateStaticParams() {
-  return [{locale: 'en'}, {locale: 'de'}];
+  return [{locale: 'en'}, {locale: 'lt'}];
 }
 
 const inter = Inter({ subsets: ['latin'] });
@@ -19,7 +19,7 @@ async function getMessages(locale: string) {
   } catch (error) {
     notFound();
   }
-}
+};
 
 export const metadata: Metadata = {
   title: 'Local updates App',

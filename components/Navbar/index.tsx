@@ -46,7 +46,7 @@ export default function Navbar() {
             </ul>
           </div>
           <div className="navbar-end mr-5 flex">
-            <div className="hidden lg:block">
+            <div className="hidden lg:block mr-2">
               <ConnectButtons />
             </div>
             <ThemeButton />
